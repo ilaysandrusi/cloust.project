@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Project Cloust</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- כפתור תפריט -->
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <!-- תפריט מסך מלא -->
+  <nav id="menu" class="fullscreen-menu">
+    <ul>
+      <li><a href="#my-fashion-story">My Story</a></li>
+      <li><a href="#my-inspirations">My Inspirations</a></li>
+      <li><a href="#sketch-to-street">Sketch to Street</a></li>
+      <li><a href="#our-gallery">Our Gallery</a></li>
+      <li><a href="#collaborations">Collaborations</a></li>
+	  <li><a href="#What-I-Learned">Things I Learned</a></li>
+    </ul>
+  </nav>
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Project Cloust</h1>
+    <p class="changing-text">Where Fashion Meets <span id="changingWord">Art</span></p>
+    <a href="#my-fashion-story" class="cta-button">Explore</a>
+  </header>
+  <!-- הסיפור שלי -->
+  <section id="my-fashion-story" class="section">
+    <h2>My Story</h2>
+    <p>My journey into fashion started when I was around 14 or 15. I always loved clothes and dressing differently. I was drawn to unique colors, bold pieces, and got super inspired by streetwear creators I followed online. That early spark is still with me today.</p>
+    <p>After finishing the army, I asked myself: What do I really want to do now? What’s my passion?<br> (Funny enough, I had that thought while shopping for clothes at the mall 😄)</p>
+    <p>I started digging deeper into what I love about fashion, and slowly things began to take shape – suppliers, a website, designs, photo shoots, packaging, orders... And that’s how CLOUST was born.</p>
+  </section>
+  <!-- השראות -->
+  <section id="my-inspirations" class="section">
+    <h2>My Inspirations</h2>
+    <p>I get inspired by stylists, fashion designers, and creators I follow online – people who know how to mix bold choices with real personality. Fashion exhibitions also give me ideas I wouldn’t think of on my own.
+    	I love using visual tools like Pinterest and Coolors to explore color palettes and moods.
+	    But most of all, I experiment with my own clothes – trying bold combinations, layering pieces, and seeing what works. That’s when inspiration really hits: in the mirror, not just on the screen.
+	</p>
+  </section>
+  <!-- עד למוצר מוגמר -->
+  <section id="sketch-to-street" class="section">
+    <h2>Sketch to Street</h2>
+    <p>After getting inspired, I sketch the idea either by hand or directly in Adobe Illustrator. From there, I refine the concept with my own twist and turn it into a full design.
+	Once it’s ready, I contact the supplier to work on patterns, sizing, and fabrics. I choose the right materials depending on the season. Then I handle pricing, packaging, shipping, and finally – I bring it to life on the website, ready to be worn in the real world.
+
+</p>
+  </section>
+  <!-- גלרייה -->
+  <section id="our-gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+      <!-- ניתן להוסיף תמונות נוספות עם אותו מבנה -->
+      <div class="gallery-item"><img src="images/image1.webp" alt="Design 1" /></div>
+      <div class="gallery-item"><img src="images/image2.webp" alt="Design 2" /></div>  
+      <div class="gallery-item"><img src="images/image3.webp" alt="Design 3" /></div>
+      <div class="gallery-item"><img src="images/image4.webp" alt="Design 4" /></div>
+      <div class="gallery-item"><img src="images/image5.webp" alt="Design 5" /></div>
+      <div class="gallery-item"><img src="images/image6.webp" alt="Design 6" /></div>
+      <div class="gallery-item"><img src="images/image7.webp" alt="Design 7" /></div>
+    </div>
+  </section>
+  <!-- Collaborations -->
+  <section id="collaborations" class="section">
+    <h2>Creative Collaborations</h2>
+    <p>One of our most exciting collaborations was with a dance crew called Ginga – inspired by our love for hip-hop culture and street style.
+    	We designed custom shirts and hats just for them, and they brought our vision to life with a high-energy performance that mixed fashion and movement in the coolest way.
+	</p>
+    <p>This is how we brought it to life.🎬</p>
+    <!-- וידאו -->
+    <div id="video">
+      <video controls autoplay muted loop style="width:100%; border-radius:12px; margin-top:20px;">
+        <source src="videos/intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <!-- קישור לשיתוף פעולה נוסף -->
+      <h2>Link to another collab we did</h2>
+      <p>Here you can see a video by a stand-up comedian, host, and voice actor who's gone viral on TikTok. We did a fun collab with him – just like we did with the dancers. We gave him shirts with our custom design, and he created a video wearing them and gave us a shoutout to help generate traffic and reach new people.</p>
+      <div class="instagram-credit">
+        <a href="https://www.instagram.com/reel/C8wPAm2gEB_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+          🎥 Video by <span>@Itay Itzhaki | איתי יצחקי</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- מודל תצוגת תמונה מוגדלת -->
+  <div id="imageModal" class="image-modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+   <!-- דברים שלמדתי -->
+  <section class="section" id="What-I-Learned">
+  <h2>Things I Learned</h2>
+  <p>By building this website, I learned how the foundation of HTML and CSS works together to create a full visual layout.
+       I now understand what different HTML tags do, how they affect the structure of a page, and how to use them correctly.
+       In CSS, I learned how to style elements in creative ways, control layout with Flexbox and Grid, and make the design responsive for different screen sizes.
+       I also practiced keeping a consistent style using colors, fonts, spacing, and transitions.
+       Additionally, I used JavaScript to add simple interactivity to the site – like the image popup, the changing text, and the animated menu.
+       This helped me understand how to connect logic with design and create a better user experience.</p>
+  <p>I also learned how to keep my code clean and organized so that others (like teammates or testers) can read and understand it easily.</p>
+</section>
+  <!-- JavaScript -->
+  <script>
+    // תפריט פתיחה/סגירה
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+
+    // סגירת תפריט לאחר לחיצה על קישור
+    document.querySelectorAll("#menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("menu").classList.remove("active");
+      });
+    });
+
+    // טקסט מתחלף באזור Hero
+    document.addEventListener("DOMContentLoaded", () => {
+      const words = ["Art", "Style", "Statement", "Culture", "Passion"];
+      const changingWord = document.getElementById("changingWord");
+      let i = 0;
+
+      setInterval(() => {
+        i = (i + 1) % words.length;
+        changingWord.textContent = words[i];
+      }, 400);
+    });
+
+    // פתיחת תמונה במודל
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+
+    document.querySelectorAll(".gallery-item img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    // סגירת מודל בלחיצה או ב-Esc
+    function closeModal() {
+      modal.style.display = "none";
+      modalImg.src = "";
+    }
+
+    window.addEventListener("click", e => {
+      if (e.target === modal) closeModal();
+    });
+
+    window.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeModal();
+    });
+  </script>
+</body>
+</html>

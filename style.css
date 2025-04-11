@@ -1,0 +1,330 @@
+/* ================================
+   🧱 משתנים גלובליים (CSS Variables)
+================================= */
+:root {
+  --main-color: #b38aff;
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --accent-bg: #1a1a1a;
+}
+
+/* ================================
+   🔁 סגנון כללי
+================================= */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+/* ================================
+   📝 טיפוגרפיה – כותרות
+================================= */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  color: var(--main-color);
+  font-size: 2.2em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+/* ================================
+   📱 כפתור תפריט (המבורגר)
+================================= */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: var(--main-color);
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 3000;
+}
+
+/* ================================
+   📋 תפריט מסך מלא
+================================= */
+.fullscreen-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--accent-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 2000;
+}
+
+.fullscreen-menu.active {
+  transform: translateY(0);
+}
+
+.fullscreen-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fullscreen-menu li {
+  margin: 20px 0;
+}
+
+.fullscreen-menu a {
+  font-size: 1.8em;
+  color: var(--main-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.fullscreen-menu a:hover {
+  color: var(--text-color);
+}
+
+/* ================================
+   🎯 Hero Section
+================================= */
+.hero {
+  height: 100vh;
+  background: linear-gradient(120deg, var(--accent-bg), #2a003f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.2em;
+  color: var(--main-color);
+  margin: 0;
+}
+
+.changing-text {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--main-color);
+  background: transparent;
+  color: var(--main-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+/* ================================
+   🧱 Section Layout
+================================= */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 40px auto 60px; /* ריווח אחיד בין כל סקשן */
+}
+
+.section h2 {
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+/* ================================
+   🖼️ גלריית תמונות
+================================= */
+.gallery-container {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .gallery-container {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-container {
+    column-count: 1;
+  }
+}
+
+.gallery-item {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(10%) brightness(0.95);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+  filter: grayscale(0%) brightness(1.05);
+}
+
+/* ================================
+   🔍 תצוגת תמונה מוגדלת (Modal)
+================================= */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 5000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 50px;
+}
+
+.image-modal img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: var(--text-color);
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: var(--main-color);
+}
+
+/* ================================
+   📸 קרדיט לאינסטגרם
+================================= */
+.instagram-credit {
+  margin-top: 15px;
+  font-size: 1em;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.instagram-credit a {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.instagram-credit a:hover {
+  color: var(--text-color);
+}
+.dev-hide {
+  display: none !important;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  .menu-btn {
+    font-size: 24px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .fullscreen-menu a {
+    font-size: 1.4em;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .changing-text {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+    font-size: 0.95em;
+  }
+
+  .section {
+    padding: 40px 15px;
+    margin: 30px auto;
+  }
+
+  .gallery-container {
+    column-count: 1;
+    padding: 15px;
+  }
+
+  .gallery-item img {
+    border-radius: 8px;
+  }
+
+  .image-modal img {
+    max-width: 95%;
+    max-height: 70vh;
+  }
+
+  .close-modal {
+    font-size: 30px;
+    top: 10px;
+    right: 20px;
+  }
+
+  .instagram-credit {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}
